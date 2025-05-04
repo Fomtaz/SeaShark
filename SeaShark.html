@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SeaShark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">SeaShark</div>
+    <nav>
+      <ul>
+        <li><button id="home-button">Home</button></li>
+        <li><button id="info-button">Info</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section" id="welcome-section">
+    <h1>Welcome to SeaShark, we hope you enjoy using it after your purchase</h1>
+    <div class="image-container">
+      <img src="4.png" alt="SeaShark 25v" class="main-image">
+    </div>
+    <button id="info-button-main">Info</button>
+  </section>
+
+  <section class="section" id="info-section" style="display: none;">
+    <div class="gallery">
+      <img src="2.png" alt="2">
+      <img src="3.png" alt="3">
+      <img src="1.png" alt="1">
+    </div>
+    <p class="contact">Latest version 2.5v ,33 options ,for buy contact dc: <strong>elohejo</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SeaShark. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Pobranie elementów
+    const homeButton = document.getElementById("home-button");
+    const infoButton = document.getElementById("info-button");
+    const infoButtonMain = document.getElementById("info-button-main");
+    const welcomeSection = document.getElementById("welcome-section");
+    const infoSection = document.getElementById("info-section");
+
+    // Funkcje do przełączania sekcji
+    homeButton.addEventListener("click", () => {
+      welcomeSection.style.display = "block";
+      infoSection.style.display = "none";
+    });
+
+    infoButton.addEventListener("click", () => {
+      welcomeSection.style.display = "none";
+      infoSection.style.display = "block";
+    });
+
+    infoButtonMain.addEventListener("click", () => {
+      welcomeSection.style.display = "none";
+      infoSection.style.display = "block";
+    });
+  </script>
+</body>
+</html>
